@@ -2,6 +2,7 @@ package br.com.alura.curso.controller;
 
 
 import br.com.alura.curso.records.ConsultasRecord;
+import br.com.alura.curso.records.dtos.DadosConsultaDTO;
 import br.com.alura.curso.service.ConsultasService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -22,9 +23,9 @@ public class ConsultasController {
 
 
     @PostMapping
-    public ResponseEntity agendar(@RequestBody @Valid ConsultasRecord record){
-        service.agendarConsulta(record);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<DadosConsultaDTO> agendar(@RequestBody @Valid ConsultasRecord record){
+        var response = service.agendarConsulta(record);
+        return ResponseEntity.ok(response);
     }
 
 }

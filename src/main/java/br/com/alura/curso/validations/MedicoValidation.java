@@ -1,6 +1,9 @@
 package br.com.alura.curso.validations;
 
+import br.com.alura.curso.model.Medico;
 import br.com.alura.curso.records.ConsultasRecord;
+import br.com.alura.curso.records.MedicoRecord;
+import br.com.alura.curso.records.dtos.MedicoDTO;
 import br.com.alura.curso.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

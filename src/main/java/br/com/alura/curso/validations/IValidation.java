@@ -1,5 +1,6 @@
 package br.com.alura.curso.validations;
 
+import br.com.alura.curso.model.Medico;
 import br.com.alura.curso.records.ConsultasRecord;
 import org.springframework.stereotype.Component;
 
