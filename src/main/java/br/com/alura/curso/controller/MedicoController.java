@@ -4,6 +4,7 @@ import br.com.alura.curso.model.Medico;
 import br.com.alura.curso.records.MedicoRecord;
 import br.com.alura.curso.records.dtos.MedicoListagens;
 import br.com.alura.curso.service.MedicoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/medicos")
+@SecurityRequirement(name = "bearer-key")
 public class MedicoController {
 
     final MedicoService service;

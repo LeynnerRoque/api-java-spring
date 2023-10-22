@@ -24,6 +24,10 @@ public class ConsultasService {
     private List<IValidation> validations;
 
     public void agendarConsulta(ConsultasRecord record){
+        //TODO
+        //Retornar dados do paciente e do medico
+        //campo data para marcar consulta
+        //nao pode marcar em sabado e domingo ate 30 minutos antes das 8 as 19
         validations.forEach(v -> v.validar(record));
         var consultas = consultasMapper.fromEntity(record);
         consultaRepository.save(consultas);
