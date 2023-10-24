@@ -24,6 +24,6 @@ public class DadosConsultaService {
 
     public PacienteDTO buildPaciente(ConsultasRecord record){
         var paciente = pacienteRepository.findById(record.idPaciente()).get();
-        return new PacienteDTO(paciente.getNome(), paciente.getCpf());
+        return new PacienteDTO(paciente.getNome(), paciente.getCpf(), paciente.getEmail());
     }
 }

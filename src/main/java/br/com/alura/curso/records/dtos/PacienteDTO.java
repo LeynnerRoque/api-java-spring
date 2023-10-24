@@ -1,4 +1,4 @@
 package br.com.alura.curso.records.dtos;
 
-public record PacienteDTO (String nome, String cpf) {
+public record PacienteDTO (String nome, String cpf, String email) {
 }
