@@ -30,10 +30,6 @@ public class ConsultasService {
     private EmailService serviceMail;
 
     public DadosConsultaDTO agendarConsulta(ConsultasRecord record){
-        //TODO
-        //campo data para marcar consulta
-        //nao pode marcar em sabado e domingo ate 30 minutos antes das 8 as 19
-        //Enviar e-mail
         validations.forEach(v -> v.validar(record));
         var consultas = consultasMapper.fromEntity(record);
         consultaRepository.save(consultas);
