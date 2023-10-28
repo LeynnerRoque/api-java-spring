@@ -31,18 +31,18 @@ public class EmailService {
         }
     }
 
-    public void sendMailTemplate1(){
-        MimeMessage mimeMessage = templateMails.sendMailTemplateOne("");
+    public void sendMailTemplate1(String destinatario){
+        MimeMessage mimeMessage = templateMails.sendMailTemplateOne(destinatario);
         mailSender.send(mimeMessage);
     }
 
-    public void sendMailTemplate2(){
-        MimeMessage mimeMessage = templateMails.sendMailTemplatesTwo("");
+    public void sendMailTemplate2(String destinatario){
+        MimeMessage mimeMessage = templateMails.sendMailTemplatesTwo(destinatario);
         mailSender.send(mimeMessage);
     }
 
-    public void sendMailTemplate3(){
-        MimeMessage mimeMessage = templateMails.sendMailTemplateThree("");
+    public void sendMailTemplate3(String destinatario){
+        MimeMessage mimeMessage = templateMails.sendMailTemplateThree(destinatario);
         mailSender.send(mimeMessage);
     }
 }

@@ -75,7 +75,6 @@ public class TemplateMails {
                     +"	<br/>"
                     +"	<img src='cid:googleplay'>"
                     +"	&nbsp;&nbsp;&nbsp;&nbsp;"
-                    +"	<img src='cid:appstore'>"
                     +"</body>"
                     +"</html>"
                     ;
@@ -83,11 +82,9 @@ public class TemplateMails {
 
             compose.setText(MESSAGE_TEMPLATE_CONTENT, true);
 
-            FileSystemResource bannerfirst = new FileSystemResource(new File("C:/opt/API AULAS/resources/banner-google.png"));
-            FileSystemResource bannersecond = new FileSystemResource(new File("C:/opt/API AULAS/resources/banner-appstore.png"));
+            FileSystemResource bannerfirst = new FileSystemResource(new File("/Users/leynnerroque/Documents/Projetos/api/src/main/resources/img/logo-buscavet-v1.png"));
 
             compose.addInline("googleplay", bannerfirst);
-            compose.addInline("appstore", bannersecond);
 
 
             compose.setTo(destinatario);
